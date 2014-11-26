@@ -542,6 +542,9 @@ if __FILE__ == $0 then
             end
           end
         end
+      
+      # Queue needs to be Handled
+      
       when 'PRIVMSG'
         if xdcc_sent and not xdcc_accepted and prefix =~ /#{Regexp.escape req.bot}!(.*)$/i
           /^\001DCC SEND (?<fname>((".*?").*?|(\S+))) (?<ip>\d+) (?<port>\d+) (?<fsize>\d+)\001\015$/ =~ msg
